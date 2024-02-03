@@ -2,7 +2,7 @@ import pygame
 import random
 import os
 
-#Seta cores
+# Seta cores
 branco = (255,255,255)
 preta = (0,0,0)
 vermelho = (198,26,49)
@@ -11,18 +11,17 @@ azul = (26,141,198)
 
 roxo = (137,44,208)
 
-#Verifica se a biblioteca Pygame está instalada
+# Verifica se a Pygame está instalada
 try:
 	pygame.init()
 except:
 	print('Pygame não foi inicializado com sucesso')
 
-#Exibe quantas operações foram sucedidas ou malsucedidas
+# Exibe quantas operações foram sucedidas ou malsucedidas
 print(pygame.init())
 
-#Cria lista de afirmações
+# Cria lista de afirmações
 def get_afirmacoes():
-
 	afirmacoes = []
 
 	afirmacoes.append(['A COVID-19 gerou a sexta grande pandemia mundial.','V','Houve a gripe espanhola em 1918 e outras.'])
@@ -36,31 +35,32 @@ def get_afirmacoes():
 	afirmacoes.append(['Uma tonelada de papel reciclado poupava cerca de 22 árvores.','V','Com apenas 1 árvore se produzia milhares de kilos.'])
 
 	return afirmacoes
+
 afirmacoes = get_afirmacoes()
 
-#Embaralha afirmações
+# Embaralha afirmações
 random.shuffle(afirmacoes)
 
-#Inicializa o módulo display
+# Inicializa módulo display
 pygame.display.init()
 
-#Inicializa o módulo fonte
+# Inicializa módulo fonte
 pygame.font.init()
 
-#Seta o tipo de fonte
+# Seta tipo de fonte
 minhafonte = pygame.font.SysFont('Arial', 30)
 
-#Seta largura e altura
+# Seta largura e altura
 fundo = pygame.display.set_mode((1080,600))
 
-#Seta nome da janela
+# Seta nome da janela
 pygame.display.set_caption('Future Hope')
 
-#Não deixa exceder 60fps
+# Não deixa exceder 60fps
 clock = pygame.time.Clock()
 clock.tick(60)
 
-#História do jogo
+# História do jogo
 historia = True
 while historia:
 
@@ -86,11 +86,12 @@ while historia:
 	fundo.blit(texto_4,(30,230))
 	fundo.blit(texto_5,(30,500))
 
-	#Atualiza parte da tela para um novo frame, sempre que eu fizer algo novo, vai mostrar
+	# Atualiza parte da tela para um novo frame
+	# Vai mostrar sempre que eu fizer algo novo
 	pygame.display.update()
 
 
-#Menu Inicial
+# Menu Inicial
 menu = True
 while menu:
 
@@ -114,11 +115,12 @@ while menu:
 	fundo.blit(texto_jogar,(500,110))
 	fundo.blit(texto_sair,(500,170))
 
-	#Atualiza parte da tela para um novo frame, sempre que eu fizer algo novo, vai mostrar
+	# Atualiza parte da tela para um novo frame
+	# Vai mostrar sempre que eu fizer algo novo
 	pygame.display.update()
 
-	#Exibe eventos capturados na janela do jogo
-	#print(event)
+	# Exibe eventos capturados na janela do jogo
+	# print(event)
 
 def jogar():
 
@@ -191,7 +193,7 @@ def jogar():
 							vida -= 5500
 							respondido =  False
 
-		#Atualiza tela 
+		# Atualiza tela 
 		pygame.display.update()
 
 	def pontuacao():
@@ -219,15 +221,15 @@ def jogar():
 			fundo.blit(texto_menu,(500,110))
 			fundo.blit(texto_sair,(500,170))
 
-			#Atualiza tela
+			# Atualiza tela
 			pygame.display.update()
 
 	pontuacao()
 
-	#print('saiu')
+	# print('saiu')
 
-#Inicia o jogo após sair do Menu Inicial
+# Inicia o jogo após sair do Menu Inicial
 jogar()
 
-#Sai do jogo
+# Sai do jogo
 pygame.quit()
