@@ -1,3 +1,3 @@
 # future-hope
 
-Um quiz desenvolvido em Python usando a biblioteca PyGame.
+Um quiz desenvolvido em python usando a biblioteca PyGame.
