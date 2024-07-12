@@ -1,3 +1,3 @@
-# Future Hope
+# future-hope
 
-A "True or False" quiz game created with pygame.
+Um quiz desenvolvido em Python usando a biblioteca PyGame.
