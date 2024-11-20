@@ -281,7 +281,7 @@ def jogar():
     pontuacao()
 
 
-# Inicia o jogo após sair do Menu inicial
+# Inicia jogo após sair do Menu inicial
 jogar()
 
 # Sai do jogo
